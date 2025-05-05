@@ -1,33 +1,30 @@
-baseURL = 'https://mehdimhb.github.io/'
+baseURL = 'https://mehdimohebbi.ir/'
 languageCode = 'en-us'
-title = 'My website'
+title = 'Mehdi Mohebbi'
 theme = 'typo'
-
-# Google analytics code
-googleAnalytics = "G-xxxxxxxxx"
 
 [taxonomies]
 tag = 'tags'
 
 [params]
 # Meta description
-description = "A Tech Blog"
+description = "A Computer Science Student."
 
 # Appearance settings
-theme = 'auto'
+theme = 'light'
 colorPalette = 'default'
 hideHeader = false
 
 # Intro on main page, content is markdown
 homeIntroTitle = 'Hi!'
 homeIntroContent = """
-I am an Italian Software Engineer with a strong foundation in computer science and a passion for solving complex problems.
-I am interested in a range of topics, including algorithms, distributed systems, databases, and information retrieval.
+Welcome! I’m a computer-science student fascinated by where large language models, computational neuroscience and formal logic intersect.
+Here you’ll find concise posts about the projects I’ve built, experiments I’ve run and insights I’ve gleaned along the way—without the jargon overload.
 """
 
-# Collection to display on home
-homeCollectionTitle = 'Posts'
-homeCollection = 'posts'
+# # Collection to display on home
+# homeCollectionTitle = 'Posts'
+# homeCollection = 'posts'
 
 # Lists parameters
 paginationSize = 100
@@ -43,15 +40,15 @@ home = "Home"
 # Social icons
 [[params.social]]
 name = "linkedin"
-url = "https://www.linkedin.com/in/user/"
+url = "https://www.linkedin.com/in/mehdi-mohebbi3/"
 
-[[params.social]]
-name = "medium"
-url = "https://medium.com/@user"
+# [[params.social]]
+# name = "medium"
+# url = "https://medium.com/@user"
 
 [[params.social]]
 name = "github"
-url = "https://github.com/user"
+url = "https://github.com/mehdimhb"
 
 # Main menu pages
 [[params.menu]]
