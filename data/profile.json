@@ -1,0 +1,483 @@
+{
+  "name": "Mehdi Mohebbi",
+  "first_name": "Mehdi",
+  "location": "Tehran, Iran",
+  "summary": "",
+  "interests": [
+    "Time-series foundation models",
+    "Wearable sensing and human activity recognition",
+    "Medical signal processing",
+    "Handwritten text recognition",
+    "Spatial survey sampling"
+  ],
+  "links": [
+    {
+      "kind": "email",
+      "label": "mehdi.mhb3@gmail.com",
+      "url": "mailto:mehdi.mhb3@gmail.com"
+    },
+    {
+      "kind": "scholar",
+      "label": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=ZF1wHQMAAAAJ"
+    },
+    {
+      "kind": "orcid",
+      "label": "ORCID",
+      "url": "https://orcid.org/0009-0007-2090-6677"
+    },
+    {
+      "kind": "github",
+      "label": "GitHub",
+      "url": "https://github.com/mehdimhb"
+    },
+    {
+      "kind": "linkedin",
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/mehdi-mohebbi3"
+    }
+  ],
+  "cv": "Mohebbi_Mehdi_CV.pdf",
+  "education": [
+    {
+      "degree": "M.Sc. in Computer Science (Artificial Intelligence and Soft Computing)",
+      "institution": "University of Tehran",
+      "location": "Tehran, Iran",
+      "dates": "Sep 2024 – expected Jun 2027",
+      "gpa": "17.83/20 (3.69/4)",
+      "thesis": "Document-Level Offline Handwritten Text Recognition using Deep Learning Approaches",
+      "advisors": [
+        "Dr. Bagher BabaAli"
+      ],
+      "details": []
+    },
+    {
+      "degree": "B.Sc. in Computer Science",
+      "institution": "Kharazmi University",
+      "location": "Tehran, Iran",
+      "dates": "Sep 2020 – Jul 2024",
+      "gpa": "19.34/20 (3.98/4)",
+      "thesis": "",
+      "advisors": [],
+      "details": []
+    }
+  ],
+  "research": [
+    {
+      "role": "Research Assistant",
+      "organization": "University of Tehran",
+      "location": "Tehran, Iran",
+      "dates": "Jun 2025 – Present",
+      "supervisor": "Dr. Bagher BabaAli",
+      "bullets": [
+        "Designing compact handwritten text recognition models for English and Persian using JEPA-style latent prediction.",
+        "Working with wearable and smartphone motion-sensor (IMU) data for human activity recognition and neurological disorder diagnosis.",
+        "Built the 1st-place SHL Challenge entries for smartphone-sensor locomotion recognition: in 2025, an ensemble of pre-trained time-series foundation models and biosignal models trained from scratch; in 2026, early and late fusion of frozen time-series foundation models."
+      ]
+    },
+    {
+      "role": "Research Assistant",
+      "organization": "Kharazmi University",
+      "location": "Tehran, Iran",
+      "dates": "May 2023 – Present",
+      "supervisor": "Dr. Bardia Panahbehagh",
+      "bullets": [
+        "Research on Graphical Finite Population Sampling (GFS); co-developed an open-source Python package that implements and extends it (github.com/mehdimhb/graphical-sampling).",
+        "Introduced Intelligent n-Means Spatial Sampling, a GFS-based method for designing well-spread samples that give more precise estimates in spatial populations.",
+        "Proposed a new index for measuring the spatial spread of samples.",
+        "Developing deep learning models to learn and optimize the space of sampling designs for given populations."
+      ]
+    }
+  ],
+  "teaching": [
+    {
+      "role": "Teaching Assistant",
+      "organization": "University of Tehran",
+      "location": "Tehran, Iran",
+      "dates": "Sep 2025 – Jun 2026",
+      "supervisor": "",
+      "bullets": [
+        "Machine Learning (Fall 2025), Dr. Bagher BabaAli.",
+        "Natural Language Processing (Spring 2026), Dr. Bagher BabaAli."
+      ]
+    },
+    {
+      "role": "Teaching Assistant",
+      "organization": "Kharazmi University",
+      "location": "Tehran, Iran",
+      "dates": "Feb 2023 – Jun 2024",
+      "supervisor": "",
+      "bullets": [
+        "Principles of Theory of Computation (Spring 2023), Dr. Arash Ahadi.",
+        "Artificial Intelligence (Fall 2023), Dr. Mahdi Cherakhloo.",
+        "Foundations of Numerical Analysis (Fall 2023), Dr. Jamshid Saeidian.",
+        "Stochastic Processes (Spring 2024), Dr. Bardia Panahbehagh."
+      ]
+    }
+  ],
+  "work": [
+    {
+      "role": "Statistical Consultant (part-time)",
+      "organization": "Divar",
+      "location": "Tehran, Iran",
+      "dates": "Jan 2025 – Jun 2025",
+      "supervisor": "",
+      "bullets": [
+        "Designed and conducted a market research study for Divar with Dr. Bardia Panahbehagh, including the sampling plan and survey methodology for collecting representative market data."
+      ]
+    }
+  ],
+  "publications": [
+    {
+      "kind": "conference",
+      "status": "accepted",
+      "authors": [
+        {
+          "name": "Mehdi Mohebbi",
+          "me": true
+        },
+        {
+          "name": "Amir Basuti",
+          "me": false
+        },
+        {
+          "name": "Mohammad Mahdi Azizi",
+          "me": false
+        },
+        {
+          "name": "Bagher BabaAli",
+          "me": false
+        }
+      ],
+      "title": "Leveraging frozen time-series foundation models for IMU-based freezing of gait detection",
+      "venue": "33rd National and 11th International Iranian Conference on Biomedical Engineering (ICBME)",
+      "year": "2026",
+      "url": "",
+      "note": "To appear in IEEE Xplore"
+    },
+    {
+      "kind": "workshop",
+      "status": "accepted",
+      "authors": [
+        {
+          "name": "Mehdi Mohebbi",
+          "me": true
+        },
+        {
+          "name": "Ali Majlesi",
+          "me": false
+        },
+        {
+          "name": "Amir Basuti",
+          "me": false
+        },
+        {
+          "name": "Iraj Gharaee",
+          "me": false
+        },
+        {
+          "name": "Mohammad Mahdi Azizi",
+          "me": false
+        },
+        {
+          "name": "Bagher BabaAli",
+          "me": false
+        },
+        {
+          "name": "Pouya Mohseni",
+          "me": false
+        }
+      ],
+      "title": "Early and late fusion of frozen foundation models for IMU-based human activity recognition",
+      "venue": "Sussex-Huawei Locomotion (SHL) Challenge 2026, Companion of the ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp/ISWC)",
+      "year": "2026",
+      "url": "",
+      "note": "Equal contribution (first two authors)"
+    },
+    {
+      "kind": "conference",
+      "status": "accepted",
+      "authors": [
+        {
+          "name": "Ali Majlesi",
+          "me": false
+        },
+        {
+          "name": "Amir Basuti",
+          "me": false
+        },
+        {
+          "name": "Mehdi Mohebbi",
+          "me": true
+        },
+        {
+          "name": "Iraj Gharaee",
+          "me": false
+        },
+        {
+          "name": "Bagher BabaAli",
+          "me": false
+        }
+      ],
+      "title": "Task-dependent phase isolation in clinical gait: Rethinking time-series foundation models beyond sliding windows",
+      "venue": "IEEE Signal Processing in Medicine and Biology Symposium (SPMB)",
+      "year": "2026",
+      "url": "",
+      "note": ""
+    },
+    {
+      "kind": "journal",
+      "status": "in press",
+      "authors": [
+        {
+          "name": "Bardia Panahbehagh",
+          "me": false
+        },
+        {
+          "name": "Mehdi Mohebbi",
+          "me": true
+        },
+        {
+          "name": "Amir Mohammad HosseiniNasab",
+          "me": false
+        }
+      ],
+      "title": "Measuring spatial spread via n-means balanced clustering",
+      "venue": "Journal of Survey Statistics and Methodology (JSSAM)",
+      "year": "2026",
+      "url": "https://arxiv.org/abs/2510.24183",
+      "note": "An earlier version, combined with “Intelligent n-means spatial sampling”, is on arXiv (2510.24183)"
+    },
+    {
+      "kind": "journal",
+      "status": "under revision",
+      "authors": [
+        {
+          "name": "Bardia Panahbehagh",
+          "me": false
+        },
+        {
+          "name": "Mehdi Mohebbi",
+          "me": true
+        }
+      ],
+      "title": "Intelligent n-means spatial sampling",
+      "venue": "Journal of Survey Statistics and Methodology (JSSAM)",
+      "year": "2026",
+      "url": "https://arxiv.org/abs/2510.24183",
+      "note": "Major revision, second review round. An earlier version, combined with “Measuring spatial spread via n-means balanced clustering”, is on arXiv (2510.24183)"
+    },
+    {
+      "kind": "workshop",
+      "status": "published",
+      "authors": [
+        {
+          "name": "Mohammad Foad Abdi",
+          "me": false
+        },
+        {
+          "name": "Yousef Alikhani",
+          "me": false
+        },
+        {
+          "name": "Mohammad Mahdi Azizi",
+          "me": false
+        },
+        {
+          "name": "Bagher BabaAli",
+          "me": false
+        },
+        {
+          "name": "Mehdi Mohebbi",
+          "me": true
+        },
+        {
+          "name": "Arash Nasr Esfahani",
+          "me": false
+        }
+      ],
+      "title": "Ensemble of foundation models for sensor-based locomotion and transportation mode recognition",
+      "venue": "Companion of the 2025 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp/ISWC '25), pp. 949-955",
+      "year": "2025",
+      "url": "https://doi.org/10.1145/3714394.3756217",
+      "note": ""
+    },
+    {
+      "kind": "conference",
+      "status": "published",
+      "authors": [
+        {
+          "name": "Mahdi Cherakhloo",
+          "me": false
+        },
+        {
+          "name": "Mahtab Ranjbar",
+          "me": false
+        },
+        {
+          "name": "Mehdi Mohebbi",
+          "me": true
+        },
+        {
+          "name": "Bijan Vosoughi Vahdat",
+          "me": false
+        }
+      ],
+      "title": "DCT-HistoTransformer: Efficient lightweight vision transformer with DCT integration for histopathological image analysis",
+      "venue": "31st National and 9th International Iranian Conference on Biomedical Engineering (ICBME), pp. 409-415",
+      "year": "2024",
+      "url": "https://doi.org/10.1109/ICBME64381.2024.10895619",
+      "note": ""
+    },
+    {
+      "kind": "conference",
+      "status": "published",
+      "authors": [
+        {
+          "name": "Vincent Loonis",
+          "me": false
+        },
+        {
+          "name": "Bardia Panahbehagh",
+          "me": false
+        },
+        {
+          "name": "Amir E. Ghara",
+          "me": false
+        },
+        {
+          "name": "Mehdi Mohebbi",
+          "me": true
+        }
+      ],
+      "title": "Artificial bee colony improvement of determinantal sampling designs",
+      "venue": "18th Iranian Statistics Conference, K.N. Toosi University of Technology, Tehran, Iran",
+      "year": "2026",
+      "url": "",
+      "note": ""
+    },
+    {
+      "kind": "conference",
+      "status": "published",
+      "authors": [
+        {
+          "name": "Bardia Panahbehagh",
+          "me": false
+        },
+        {
+          "name": "Mehdi Mohebbi",
+          "me": true
+        },
+        {
+          "name": "Amir Mohammad HosseiniNasab",
+          "me": false
+        }
+      ],
+      "title": "A density-based index to measure spread of a spatial sample",
+      "venue": "Proceedings of the 2nd International Conference on Mathematics and its Applications, Shahid Chamran University of Ahvaz, Ahvaz, Iran, pp. 6-13",
+      "year": "2025",
+      "url": "",
+      "note": ""
+    },
+    {
+      "kind": "conference",
+      "status": "published",
+      "authors": [
+        {
+          "name": "Bardia Panahbehagh",
+          "me": false
+        },
+        {
+          "name": "Amirhosein Javadpour",
+          "me": false
+        },
+        {
+          "name": "Zohre Bagherpour",
+          "me": false
+        },
+        {
+          "name": "Hossein Kian",
+          "me": false
+        },
+        {
+          "name": "Mehdi Mohebbi",
+          "me": true
+        }
+      ],
+      "title": "Design strategies for training samples in regression",
+      "venue": "Proceedings of the 2nd International Conference on Mathematics and its Applications, Shahid Chamran University of Ahvaz, Ahvaz, Iran, pp. 14-22",
+      "year": "2025",
+      "url": "",
+      "note": ""
+    }
+  ],
+  "awards": [
+    {
+      "title": "1st Place, Sussex-Huawei Locomotion (SHL) Challenge 2026",
+      "issuer": "HASCA Workshop at ACM UbiComp/ISWC 2026",
+      "date": "Oct 2026",
+      "description": "",
+      "certificate": "certificates/shl-2026-first-place.pdf"
+    },
+    {
+      "title": "1st Place, Sussex-Huawei Locomotion (SHL) Challenge 2025 (Task 1)",
+      "issuer": "HASCA Workshop at ACM UbiComp/ISWC 2025",
+      "date": "Oct 2025",
+      "description": "",
+      "certificate": "certificates/shl-2025-first-place.pdf"
+    },
+    {
+      "title": "1st Place, 4th National Student Operations Research Competition",
+      "issuer": "Held at the 17th International Conference of the Iranian Operations Research Society",
+      "date": "Jul 2024",
+      "description": "",
+      "certificate": ""
+    }
+  ],
+  "projects": [
+    {
+      "name": "graphical-sampling",
+      "url": "https://github.com/mehdimhb/graphical-sampling",
+      "date": "2023",
+      "description": "Open-source Python package that implements and extends Graphical Finite Population Sampling, including Intelligent n-Means Spatial Sampling for designing well-spread samples."
+    }
+  ],
+  "talks": [],
+  "service": [],
+  "skills": [
+    {
+      "category": "Programming",
+      "items": [
+        "Python",
+        "SQL"
+      ]
+    },
+    {
+      "category": "ML / Scientific",
+      "items": [
+        "PyTorch",
+        "Lightning",
+        "NumPy",
+        "scikit-learn"
+      ]
+    },
+    {
+      "category": "Tools",
+      "items": [
+        "Git",
+        "Linux",
+        "LaTeX"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "name": "Persian",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "Fluent, C1"
+    }
+  ]
+}

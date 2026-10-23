@@ -1,83 +1,17 @@
 baseURL = 'https://mehdimohebbi.ir/'
-languageCode = 'en-us'
+locale = 'en-US'
 title = 'Mehdi Mohebbi'
-theme = 'typo'
-
-[taxonomies]
-tag = 'tags'
+disableKinds = ['taxonomy', 'term', 'section', 'rss', 'sitemap']
+enableRobotsTXT = true
 
 [params]
-# Meta description
-description = "A Computer Science Student."
+# Meta description for search engines and link previews.
+description = 'Mehdi Mohebbi: M.Sc. student in Computer Science at the University of Tehran, working on time-series foundation models and wearable sensing.'
+# One line under the name in the header.
+tagline = 'M.Sc. student in Computer Science, University of Tehran'
+# Your photo, under assets/; Hugo crops and resizes it for the page. Leave '' to show a monogram.
+photo = 'images/photo.jpg'
 
-# Appearance settings
-theme = 'light'
-colorPalette = 'default'
-hideHeader = false
-
-# Intro on main page, content is markdown
-homeIntroTitle = 'Hi!'
-homeIntroContent = """
-Welcome! I’m a computer-science student fascinated by where large language models, computational neuroscience and formal logic intersect.
-Here you’ll find concise posts about the projects I’ve built, experiments I’ve run and insights I’ve gleaned along the way—without the jargon overload.
-"""
-
-# # Collection to display on home
-# homeCollectionTitle = 'Posts'
-# homeCollection = 'posts'
-
-# Lists parameters
-paginationSize = 100
-listSummaries = true
-listDateFormat = '2 Jan 2006'
-
-# Breadcrumbs
-[params.breadcrumbs]
-enabled = true
-showCurrentPage = true
-home = "Home"
-
-# Social icons
-[[params.social]]
-name = "linkedin"
-url = "https://www.linkedin.com/in/mehdi-mohebbi3/"
-
-# [[params.social]]
-# name = "medium"
-# url = "https://medium.com/@user"
-
-[[params.social]]
-name = "github"
-url = "https://github.com/mehdimhb"
-
-# Main menu pages
-[[params.menu]]
-name = "home"
-url = "/"
-
-[[params.menu]]
-name = "posts"
-url = "/posts"
-
-[[params.menu]]
-name = "about"
-url = "/about"
-
-# Syntax highlight on code blocks
-[markup]
-[markup.highlight]
-style = 'algol'
-
-# Giscus comments
-[params.giscus]
-enable = false
-repo = "user/repo"
-repoid = "repoId"
-category = "General"
-categoryid = "categoryId"
-mapping = "pathname"
-theme = "preferred_color_scheme"
-
-[caches]
-  [caches.images]
-    dir = ':cacheDir/images'
+# Everything about you (education, publications, experience, ...) comes from
+# data/profile.json, written by `apply27 site` from the apply27 profile/.
+# The bio is content/_index.md, and news items are data/news.toml.

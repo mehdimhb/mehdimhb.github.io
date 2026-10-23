@@ -1,0 +1,10 @@
+<li class="tl-item">
+  <time>{{ .dates }}</time>
+  <h3>{{ .role | safeHTML }} <span class="at">at</span> {{ .organization | safeHTML }}</h3>
+  {{- if or .location .supervisor }}
+  <p class="org">{{ with .supervisor }}With {{ . | safeHTML }}{{ end }}{{ if and .supervisor .location }} · {{ end }}{{ with .location }}{{ . | safeHTML }}{{ end }}</p>
+  {{- end }}
+  {{- with .bullets }}
+  <ul>{{ range . }}<li>{{ . | safeHTML }}</li>{{ end }}</ul>
+  {{- end }}
+</li>

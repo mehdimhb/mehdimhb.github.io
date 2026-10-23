@@ -1,0 +1,243 @@
+{{ define "head" }}
+{{- $p := hugo.Data.profile }}
+{{- $profiles := slice }}
+{{- range where $p.links "kind" "ne" "email" }}{{ $profiles = $profiles | append .url }}{{ end }}
+<script type="application/ld+json">
+{{ dict "@context" "https://schema.org" "@type" "Person" "name" $p.name "url" site.BaseURL
+     "jobTitle" site.Params.tagline "sameAs" $profiles | jsonify | safeJS }}
+</script>
+{{ end }}
+
+{{ define "nav" }}
+{{- $p := hugo.Data.profile }}
+<nav class="nav" aria-label="Sections">
+  <a href="#about">About</a>
+  {{- if hugo.Data.news }}<a href="#news">Recent News</a>{{ end }}
+  {{- if $p.education }}<a href="#education">Education</a>{{ end }}
+  {{- if or $p.research $p.work }}<a href="#experience">Experience</a>{{ end }}
+  {{- if $p.awards }}<a href="#awards">Honors</a>{{ end }}
+  {{- if $p.publications }}<a href="#publications">Publications</a>{{ end }}
+  {{- if or $p.projects $p.talks $p.service $p.skills }}<a href="#toolbox">Toolbox</a>{{ end }}
+</nav>
+{{ end }}
+
+{{ define "main" }}
+{{- $p := hugo.Data.profile }}
+{{- $icons := dict "email" "mail" "scholar" "googlescholar" "orcid" "orcid" "github" "github" "linkedin" "linkedin" }}
+{{- $email := index (where $p.links "kind" "email") 0 }}
+{{- $last := strings.TrimSpace (strings.TrimPrefix $p.first_name $p.name) }}
+
+<header class="hero" id="top">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <h1 class="name">{{ $p.first_name }} <em>{{ $last }}</em></h1>
+      <p class="tagline">{{ site.Params.tagline }}</p>
+      {{- with $p.interests }}
+      <p class="lede">Working on {{ range $i, $x := first 3 . }}{{ if $i }}{{ if eq $i 2 }}, and {{ else }}, {{ end }}{{ end }}<span>{{ lower $x | safeHTML }}</span>{{ end }}.</p>
+      {{- end }}
+      <div class="actions">
+        {{- with $p.cv }}
+        <a class="btn btn-primary" href="{{ . | relURL }}">{{ partial "icon.html" "download" }}Download CV</a>
+        {{- end }}
+        {{- with $email }}
+        <a class="btn btn-ghost" href="{{ .url }}">{{ partial "icon.html" "mail" }}Get in touch</a>
+        {{- end }}
+      </div>
+      <ul class="socials" aria-label="Profiles">
+        {{- range where $p.links "kind" "ne" "email" }}
+        <li><a href="{{ .url }}" rel="me noopener" title="{{ .label }}">{{ partial "icon.html" (index $icons .kind) }}<span>{{ .label }}</span></a></li>
+        {{- end }}
+      </ul>
+    </div>
+    {{- $photo := "" }}
+    {{- with site.Params.photo }}{{ with resources.Get . }}{{ $photo = . }}{{ end }}{{ end }}
+    <div class="portrait{{ if not $photo }} placeholder{{ end }}">
+      <div class="portrait-frame">
+        {{- with $photo }}
+        {{- $small := .Fill "360x440 Smart webp q85" }}
+        {{- $large := .Fill "720x880 Smart webp q85" }}
+        <img src="{{ $large.RelPermalink }}" srcset="{{ $small.RelPermalink }} 360w, {{ $large.RelPermalink }} 720w"
+             sizes="(max-width: 760px) 150px, 330px" alt="Portrait of {{ $p.name }}" width="360" height="440" fetchpriority="high">
+        {{- else }}
+        <div class="portrait-placeholder" aria-hidden="true"><span>M</span><em>M</em></div>
+        {{- end }}
+      </div>
+      {{- with $p.location }}<p class="portrait-caption">{{ . | safeHTML }}</p>{{ end }}
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="about" class="section reveal">
+    {{ partial "label.html" "About" }}
+    <div class="section-body">
+      <div class="prose">{{ .Content }}</div>
+      {{- with $p.interests }}
+      <h3 class="subhead">Research interests</h3>
+      <ul class="chips">{{ range . }}<li>{{ . | safeHTML }}</li>{{ end }}</ul>
+      {{- end }}
+    </div>
+  </section>
+
+  {{- with hugo.Data.news }}
+  <section id="news" class="section reveal">
+    {{ partial "label.html" "Recent News" }}
+    <div class="section-body">
+      <ul class="news">
+        {{- range first 6 .item }}
+        <li><time>{{ partial "date.html" .date }}</time><div>{{ .text | markdownify }}</div></li>
+        {{- end }}
+      </ul>
+    </div>
+  </section>
+  {{- end }}
+
+  {{- with $p.education }}
+  <section id="education" class="section reveal">
+    {{ partial "label.html" "Education" }}
+    <div class="section-body">
+      <div class="cards">
+        {{- range . }}
+        <article class="card">
+          <div class="card-icon">{{ partial "icon.html" "cap" }}</div>
+          <time>{{ .dates }}</time>
+          <h3>{{ .degree | safeHTML }}</h3>
+          <p class="org">{{ .institution | safeHTML }}{{ with .location }} · {{ . | safeHTML }}{{ end }}</p>
+          {{- with .gpa }}<p class="gpa"><span>GPA</span> {{ . | safeHTML }}</p>{{ end }}
+          {{- with .thesis }}<p class="detail">Thesis: <em>{{ . | safeHTML }}</em></p>{{ end }}
+          {{- with .advisors }}<p class="detail">Advisor{{ if gt (len .) 1 }}s{{ end }}: {{ delimit . ", " | safeHTML }}</p>{{ end }}
+          {{- with .details }}<ul>{{ range . }}<li>{{ . | safeHTML }}</li>{{ end }}</ul>{{ end }}
+        </article>
+        {{- end }}
+      </div>
+    </div>
+  </section>
+  {{- end }}
+
+  {{- if or $p.research $p.work }}
+  <section id="experience" class="section reveal">
+    {{ partial "label.html" "Experience" }}
+    <div class="section-body">
+      <ol class="timeline">
+        {{- range $p.research }}{{ partial "entry.html" . }}{{ end }}
+        {{- range $p.work }}{{ partial "entry.html" . }}{{ end }}
+      </ol>
+      {{- with $p.teaching }}
+      <h3 class="subhead">Teaching</h3>
+      <ol class="timeline">
+        {{- range . }}{{ partial "entry.html" . }}{{ end }}
+      </ol>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  {{- with $p.awards }}
+  <section id="awards" class="section reveal">
+    {{ partial "label.html" "Honors" }}
+    <div class="section-body">
+      <ul class="awards">
+        {{- range . }}
+        <li class="award">
+          <div class="award-icon">{{ partial "icon.html" "award" }}</div>
+          <div>
+            <time>{{ .date }}</time>
+            <h3>{{ .title | safeHTML }}</h3>
+            {{- with .issuer }}<p class="org">{{ . | safeHTML }}</p>{{ end }}
+            {{- with .description }}<p class="detail">{{ . | safeHTML }}</p>{{ end }}
+            {{- with .certificate }}
+            <a class="pill pill-link award-link" href="{{ . | relURL }}">Certificate{{ partial "icon.html" "arrow" }}</a>
+            {{- end }}
+          </div>
+        </li>
+        {{- end }}
+      </ul>
+    </div>
+  </section>
+  {{- end }}
+
+  {{- with $p.publications }}
+  <section id="publications" class="section reveal">
+    {{ partial "label.html" "Publications" }}
+    <div class="section-body">
+      {{- range (sort (uniq (apply . "index" "." "year")) "value" "desc") }}
+      {{- $year := . }}
+      <div class="pub-year">
+        <span class="year">{{ $year }}</span>
+        <ol class="pubs">
+          {{- range where $p.publications "year" $year }}
+          <li class="pub">
+            <h3 class="pub-title">{{ .title | safeHTML }}</h3>
+            <p class="pub-authors">
+              {{- range $i, $a := .authors }}{{ if $i }}, {{ end }}{{ if $a.me }}<strong>{{ $a.name | safeHTML }}</strong>{{ else }}{{ $a.name | safeHTML }}{{ end }}{{ end -}}
+            </p>
+            <p class="pub-venue">{{ .venue | safeHTML }}</p>
+            <div class="pub-meta">
+              {{- if ne .status "published" }}<span class="pill pill-{{ .status | urlize }}">{{ .status | strings.FirstUpper }}</span>{{ end }}
+              {{- with .url }}<a class="pill pill-link" href="{{ . }}">{{ if strings.Contains . "arxiv.org" }}arXiv{{ else if strings.Contains . "doi.org" }}DOI{{ else }}Link{{ end }}{{ partial "icon.html" "arrow" }}</a>{{ end }}
+              {{- with .note }}<span class="note">{{ . | safeHTML }}</span>{{ end }}
+            </div>
+          </li>
+          {{- end }}
+        </ol>
+      </div>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+
+  {{- if or $p.projects $p.talks $p.service $p.skills }}
+  <section id="toolbox" class="section reveal">
+    {{ partial "label.html" "Toolbox" }}
+    <div class="section-body">
+      {{- with $p.projects }}
+      <h3 class="subhead first">Open source</h3>
+      <ul class="projects">
+        {{- range . }}
+        <li>
+          {{- if .url }}<a class="project-name" href="{{ .url }}">{{ .name | safeHTML }}{{ partial "icon.html" "arrow" }}</a>{{ else }}<span class="project-name">{{ .name | safeHTML }}</span>{{ end }}
+          {{- with .description }}<p>{{ . | safeHTML }}</p>{{ end }}
+        </li>
+        {{- end }}
+      </ul>
+      {{- end }}
+      {{- with $p.talks }}
+      <h3 class="subhead">Talks</h3>
+      <ul class="news">
+        {{- range . }}
+        <li><time>{{ .date }}</time><div>“{{ .title | safeHTML }}”{{ with .event }}, {{ . | safeHTML }}{{ end }}{{ with .location }}, {{ . | safeHTML }}{{ end }}</div></li>
+        {{- end }}
+      </ul>
+      {{- end }}
+      {{- with $p.service }}
+      <h3 class="subhead">Academic service</h3>
+      <ul class="news">
+        {{- range . }}
+        <li><time>{{ .date }}</time><div>{{ .role | safeHTML }}{{ with .organization }}, {{ . | safeHTML }}{{ end }}</div></li>
+        {{- end }}
+      </ul>
+      {{- end }}
+      {{- if or $p.skills $p.languages }}
+      <h3 class="subhead">Skills &amp; languages</h3>
+      <dl class="skills">
+        {{- range $p.skills }}
+        <div><dt>{{ .category | safeHTML }}</dt><dd><ul class="chips small">{{ range .items }}<li>{{ . | safeHTML }}</li>{{ end }}</ul></dd></div>
+        {{- end }}
+        {{- with $p.languages }}
+        <div><dt>Languages</dt><dd><ul class="chips small">{{ range . }}<li>{{ .name | safeHTML }}{{ with .level }} <span class="muted">· {{ . | safeHTML }}</span>{{ end }}</li>{{ end }}</ul></dd></div>
+        {{- end }}
+      </dl>
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-inner">
+    <p>© {{ now.Year }} {{ $p.name }}</p>
+    <p>Last updated {{ now.Format "January 2006" }}</p>
+  </div>
+</footer>
+{{ end }}

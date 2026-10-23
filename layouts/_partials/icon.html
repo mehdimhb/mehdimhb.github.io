@@ -1,0 +1,7 @@
+{{- /* Inline SVG from assets/icons/<name>.svg, coloured by currentColor. */ -}}
+{{- with resources.Get (printf "icons/%s.svg" .) -}}
+  {{- $svg := replaceRE `<title>.*?</title>` "" .Content -}}
+  {{- $attrs := `class="icon" aria-hidden="true" focusable="false"` -}}
+  {{- if not (strings.Contains $svg `fill="none"`) }}{{ $attrs = printf `%s fill="currentColor"` $attrs }}{{ end -}}
+  {{- replace $svg "<svg " (printf "<svg %s " $attrs) | strings.TrimSpace | safeHTML -}}
+{{- end -}}

@@ -1,0 +1,25 @@
+# Recent news, newest first. `text` is Markdown. The page shows the first 6.
+
+[[item]]
+date = "2026-10"
+text = "Won **1st place** in the Sussex-Huawei Locomotion (SHL) Challenge 2026 at the HASCA Workshop, ACM UbiComp/ISWC, using early and late fusion of frozen foundation models."
+
+[[item]]
+date = "2026"
+text = "Papers accepted at **IEEE SPMB 2026** and **ICBME 2026** on time-series foundation models for clinical gait analysis."
+
+[[item]]
+date = "2025-10"
+text = "Won **1st place** in Task 1 of the SHL Challenge 2025 at the HASCA Workshop, ACM UbiComp/ISWC, with an ensemble of foundation models."
+
+[[item]]
+date = "2025-09"
+text = "Teaching assistant for Machine Learning (Fall 2025) and Natural Language Processing (Spring 2026) at the University of Tehran."
+
+[[item]]
+date = "2024-09"
+text = "Started my M.Sc. in Computer Science (AI) at the University of Tehran."
+
+[[item]]
+date = "2024-07"
+text = "Won **1st place** in the 4th National Student Operations Research Competition, held at the 17th International Conference of the Iranian Operations Research Society."

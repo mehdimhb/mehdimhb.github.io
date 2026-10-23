@@ -18,38 +18,21 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1. Checkout your source + themes/submodules
       - uses: actions/checkout@v4
-        with:
-          submodules: recursive
-          fetch-depth: 0
 
-      # 2. Install Hugo Extended (bundles Hugo Pipes & Sass)
+      # Keep in step with the local `hugo version`.
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: '0.147.0'   # or 'latest'
+          hugo-version: '0.168.0'
           extended: true
 
-      # 3. Cache Hugo’s build caches & generated resources
-      - name: Cache Hugo
-        uses: actions/cache@v3
-        with:
-          path: |
-            ~/.cache/hugo
-            resources/_gen
-          key: hugo-${{ runner.os }}-${{ hashFiles('**/config.toml','**/content/**','**/themes/**') }}
-
-      # 4. Build your site into ./public
       - name: Build site
         run: hugo --gc --minify
 
-      # 5. Prepare GitHub Pages deployment
       - name: Configure Pages
-        id: pages
         uses: actions/configure-pages@v5
 
-      # 6. Upload the generated `public/` folder
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
@@ -62,7 +45,6 @@ jobs:
       name: github-pages
       url: ${{ steps.deploy.outputs.page_url }}
     steps:
-      # 7. Publish to GitHub Pages
       - name: Deploy to GitHub Pages
         id: deploy
         uses: actions/deploy-pages@v4

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {{- /* Apply the saved theme before first paint, so the page never flashes the wrong one. */}}
+  <script>
+    (function () {
+      var root = document.documentElement;
+      root.classList.add("js");
+      try {
+        var t = localStorage.getItem("theme");
+        if (t === "light" || t === "dark") root.dataset.theme = t;
+      } catch (e) {}
+    })();
+  </script>
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · {{ site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ site.Params.description }}">
+  <link rel="canonical" href="{{ .Permalink }}">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="{{ site.Title }}">
+  <meta property="og:description" content="{{ site.Params.description }}">
+  <meta property="og:url" content="{{ .Permalink }}">
+  {{- with site.Params.photo }}{{ with resources.Get . }}
+  <meta property="og:image" content="{{ (.Fill "1200x630 Smart jpg q85").Permalink }}">
+  {{- end }}{{ end }}
+  <link rel="icon" href="{{ "favicon.svg" | relURL }}" type="image/svg+xml">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#f7f4ee" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#101217" media="(prefers-color-scheme: dark)">
+  <link rel="preload" href="{{ "fonts/fraunces.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ "fonts/inter.woff2" | relURL }}" as="font" type="font/woff2" crossorigin>
+  {{- with resources.Get "css/main.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}">
+  {{- end }}
+  {{- with resources.Get "js/main.js" | minify | fingerprint }}
+  <script src="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" defer></script>
+  {{- end }}
+  {{- block "head" . }}{{ end }}
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      {{- $name := hugo.Data.profile.name | default site.Title }}
+      {{- $first := hugo.Data.profile.first_name }}
+      <a class="brand" href="{{ "/" | relURL }}#top">{{ $first }} <span>{{ strings.TrimSpace (strings.TrimPrefix $first $name) }}</span></a>
+      {{- block "nav" . }}{{ end }}
+      <div class="theme-switch" role="group" aria-label="Color theme">
+        <button type="button" data-theme-choice="light" aria-label="Light theme" title="Light">{{ partial "icon.html" "sun" }}</button>
+        <button type="button" data-theme-choice="auto" aria-label="Match system theme" title="Auto">{{ partial "icon.html" "auto" }}</button>
+        <button type="button" data-theme-choice="dark" aria-label="Dark theme" title="Dark">{{ partial "icon.html" "moon" }}</button>
+      </div>
+    </div>
+  </header>
+  {{ block "main" . }}{{ end }}
+</body>
+</html>
