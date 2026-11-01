@@ -1,7 +1,7 @@
 {
   "name": "Mehdi Mohebbi",
   "first_name": "Mehdi",
-  "location": "Tehran, Iran",
+  "location": "",
   "summary": "",
   "interests": [
     "Time-series foundation models",
@@ -42,7 +42,7 @@
     {
       "degree": "M.Sc. in Computer Science (Artificial Intelligence and Soft Computing)",
       "institution": "University of Tehran",
-      "location": "Tehran, Iran",
+      "location": "",
       "dates": "Sep 2024 – expected Jun 2027",
       "gpa": "17.83/20 (3.69/4)",
       "thesis": "Document-Level Offline Handwritten Text Recognition using Deep Learning Approaches",
@@ -54,7 +54,7 @@
     {
       "degree": "B.Sc. in Computer Science",
       "institution": "Kharazmi University",
-      "location": "Tehran, Iran",
+      "location": "",
       "dates": "Sep 2020 – Jul 2024",
       "gpa": "19.34/20 (3.98/4)",
       "thesis": "",
@@ -66,7 +66,7 @@
     {
       "role": "Research Assistant",
       "organization": "University of Tehran",
-      "location": "Tehran, Iran",
+      "location": "",
       "dates": "Jun 2025 – Present",
       "supervisor": "Dr. Bagher BabaAli",
       "bullets": [
@@ -78,7 +78,7 @@
     {
       "role": "Research Assistant",
       "organization": "Kharazmi University",
-      "location": "Tehran, Iran",
+      "location": "",
       "dates": "May 2023 – Present",
       "supervisor": "Dr. Bardia Panahbehagh",
       "bullets": [
@@ -92,8 +92,18 @@
   "teaching": [
     {
       "role": "Teaching Assistant",
+      "organization": "Kharazmi University",
+      "location": "",
+      "dates": "Sep 2026 – Present",
+      "supervisor": "",
+      "bullets": [
+        "Statistics for international students in Artificial Intelligence (Fall 2026), Dr. Bardia Panahbehagh."
+      ]
+    },
+    {
+      "role": "Teaching Assistant",
       "organization": "University of Tehran",
-      "location": "Tehran, Iran",
+      "location": "",
       "dates": "Sep 2025 – Jun 2026",
       "supervisor": "",
       "bullets": [
@@ -104,7 +114,7 @@
     {
       "role": "Teaching Assistant",
       "organization": "Kharazmi University",
-      "location": "Tehran, Iran",
+      "location": "",
       "dates": "Feb 2023 – Jun 2024",
       "supervisor": "",
       "bullets": [
@@ -119,7 +129,7 @@
     {
       "role": "Statistical Consultant (part-time)",
       "organization": "Divar",
-      "location": "Tehran, Iran",
+      "location": "",
       "dates": "Jan 2025 – Jun 2025",
       "supervisor": "",
       "bullets": [
@@ -219,7 +229,7 @@
           "me": false
         }
       ],
-      "title": "Task-dependent phase isolation in clinical gait: Rethinking time-series foundation models beyond sliding windows",
+      "title": "Phase-aware frozen time-series foundation models for parameter-efficient clinical gait assessment",
       "venue": "IEEE Signal Processing in Medicine and Biology Symposium (SPMB)",
       "year": "2026",
       "url": "",
@@ -246,7 +256,7 @@
       "venue": "Journal of Survey Statistics and Methodology (JSSAM)",
       "year": "2026",
       "url": "https://arxiv.org/abs/2510.24183",
-      "note": "An earlier version, combined with “Intelligent n-means spatial sampling”, is on arXiv (2510.24183)"
+      "note": "An earlier version, combined with “Intelligent n-means spatial sampling”, is available as arXiv:2510.24183 (2025)"
     },
     {
       "kind": "journal",
@@ -265,7 +275,34 @@
       "venue": "Journal of Survey Statistics and Methodology (JSSAM)",
       "year": "2026",
       "url": "https://arxiv.org/abs/2510.24183",
-      "note": "Major revision, second review round. An earlier version, combined with “Measuring spatial spread via n-means balanced clustering”, is on arXiv (2510.24183)"
+      "note": "Minor revision, third review round. An earlier version, combined with “Measuring spatial spread via n-means balanced clustering”, is available as arXiv:2510.24183 (2025)"
+    },
+    {
+      "kind": "conference",
+      "status": "published",
+      "authors": [
+        {
+          "name": "Vincent Loonis",
+          "me": false
+        },
+        {
+          "name": "Bardia Panahbehagh",
+          "me": false
+        },
+        {
+          "name": "Amir E. Ghara",
+          "me": false
+        },
+        {
+          "name": "Mehdi Mohebbi",
+          "me": true
+        }
+      ],
+      "title": "Artificial bee colony improvement of determinantal sampling designs",
+      "venue": "18th Iranian Statistics Conference, K.N. Toosi University of Technology, Tehran, Iran",
+      "year": "2026",
+      "url": "",
+      "note": ""
     },
     {
       "kind": "workshop",
@@ -300,60 +337,6 @@
       "venue": "Companion of the 2025 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp/ISWC '25), pp. 949-955",
       "year": "2025",
       "url": "https://doi.org/10.1145/3714394.3756217",
-      "note": ""
-    },
-    {
-      "kind": "conference",
-      "status": "published",
-      "authors": [
-        {
-          "name": "Mahdi Cherakhloo",
-          "me": false
-        },
-        {
-          "name": "Mahtab Ranjbar",
-          "me": false
-        },
-        {
-          "name": "Mehdi Mohebbi",
-          "me": true
-        },
-        {
-          "name": "Bijan Vosoughi Vahdat",
-          "me": false
-        }
-      ],
-      "title": "DCT-HistoTransformer: Efficient lightweight vision transformer with DCT integration for histopathological image analysis",
-      "venue": "31st National and 9th International Iranian Conference on Biomedical Engineering (ICBME), pp. 409-415",
-      "year": "2024",
-      "url": "https://doi.org/10.1109/ICBME64381.2024.10895619",
-      "note": ""
-    },
-    {
-      "kind": "conference",
-      "status": "published",
-      "authors": [
-        {
-          "name": "Vincent Loonis",
-          "me": false
-        },
-        {
-          "name": "Bardia Panahbehagh",
-          "me": false
-        },
-        {
-          "name": "Amir E. Ghara",
-          "me": false
-        },
-        {
-          "name": "Mehdi Mohebbi",
-          "me": true
-        }
-      ],
-      "title": "Artificial bee colony improvement of determinantal sampling designs",
-      "venue": "18th Iranian Statistics Conference, K.N. Toosi University of Technology, Tehran, Iran",
-      "year": "2026",
-      "url": "",
       "note": ""
     },
     {
@@ -409,6 +392,33 @@
       "year": "2025",
       "url": "",
       "note": ""
+    },
+    {
+      "kind": "conference",
+      "status": "published",
+      "authors": [
+        {
+          "name": "Mahdi Cherakhloo",
+          "me": false
+        },
+        {
+          "name": "Mahtab Ranjbar",
+          "me": false
+        },
+        {
+          "name": "Mehdi Mohebbi",
+          "me": true
+        },
+        {
+          "name": "Bijan Vosoughi Vahdat",
+          "me": false
+        }
+      ],
+      "title": "DCT-HistoTransformer: Efficient lightweight vision transformer with DCT integration for histopathological image analysis",
+      "venue": "31st National and 9th International Iranian Conference on Biomedical Engineering (ICBME), pp. 409-415",
+      "year": "2024",
+      "url": "https://doi.org/10.1109/ICBME64381.2024.10895619",
+      "note": ""
     }
   ],
   "awards": [
@@ -439,7 +449,7 @@
       "name": "graphical-sampling",
       "url": "https://github.com/mehdimhb/graphical-sampling",
       "date": "2023",
-      "description": "Open-source Python package that implements and extends Graphical Finite Population Sampling, including Intelligent n-Means Spatial Sampling for designing well-spread samples."
+      "description": "Open-source Python package that implements and extends Graphical Finite Population Sampling, including Intelligent n-Means Spatial Sampling for designing well-spread samples and a Density Index for measuring the spatial spread of a sample."
     }
   ],
   "talks": [],
