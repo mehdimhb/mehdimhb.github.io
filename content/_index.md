@@ -18,6 +18,10 @@ using deep learning to learn and optimize sampling designs. We co-develop the
 open-source [graphical-sampling](https://github.com/mehdimhb/graphical-sampling)
 package.
 
-Going forward, I want to work on machine learning for health, especially models
-that keep learning from a patient's own wearable data after deployment. I will
-finish my M.Sc. by June 2027 and am looking for PhD positions starting in 2027.
+Going forward, I am most interested in the **architecture of deep learning
+models**: what they learn in their **latent space**, what makes a representation
+useful, and how models could be built to **learn continually** by design rather
+than through add-on fixes. I want to study these questions both in theory and in
+practice, with wearable sensing and health as the applications I care most
+about. I will finish my M.Sc. by June 2027 and am looking for PhD positions
+starting in 2027.
