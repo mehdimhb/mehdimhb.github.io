@@ -17,7 +17,7 @@
   {{- if or $p.research $p.work }}<a href="#experience">Experience</a>{{ end }}
   {{- if $p.awards }}<a href="#awards">Honors</a>{{ end }}
   {{- if $p.publications }}<a href="#publications">Publications</a>{{ end }}
-  {{- if or $p.projects $p.talks $p.service $p.skills }}<a href="#toolbox">Toolbox</a>{{ end }}
+  {{- if or $p.projects $p.talks $p.service $p.skills }}<a href="#toolbox">Code &amp; skills</a>{{ end }}
 </nav>
 {{ end }}
 
@@ -176,6 +176,7 @@
             <div class="pub-meta">
               {{- if ne .status "published" }}<span class="pill pill-{{ .status | urlize }}">{{ .status | strings.FirstUpper }}</span>{{ end }}
               {{- with .url }}<a class="pill pill-link" href="{{ . }}">{{ if strings.Contains . "arxiv.org" }}arXiv{{ else if strings.Contains . "doi.org" }}DOI{{ else }}Link{{ end }}{{ partial "icon.html" "arrow" }}</a>{{ end }}
+              {{- with .code }}<a class="pill pill-link" href="{{ . }}">Code{{ partial "icon.html" "arrow" }}</a>{{ end }}
               {{- with .note }}<span class="note">{{ . | safeHTML }}</span>{{ end }}
             </div>
           </li>
@@ -189,10 +190,10 @@
 
   {{- if or $p.projects $p.talks $p.service $p.skills }}
   <section id="toolbox" class="section reveal">
-    {{ partial "label.html" "Toolbox" }}
+    {{ partial "label.html" "Code & skills" }}
     <div class="section-body">
       {{- with $p.projects }}
-      <h3 class="subhead first">Open source</h3>
+      <h3 class="subhead first">Code &amp; software</h3>
       <ul class="projects">
         {{- range . }}
         <li>

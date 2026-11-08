@@ -163,6 +163,7 @@
       "venue": "33rd National and 11th International Iranian Conference on Biomedical Engineering (ICBME)",
       "year": "2026",
       "url": "",
+      "code": "https://github.com/mehdimhb/fog-tsfm",
       "note": "To appear in IEEE Xplore"
     },
     {
@@ -202,6 +203,7 @@
       "venue": "Sussex-Huawei Locomotion (SHL) Challenge 2026, Companion of the ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp/ISWC)",
       "year": "2026",
       "url": "",
+      "code": "https://github.com/mehdimhb/shl2026",
       "note": "Equal contribution (first two authors)"
     },
     {
@@ -233,6 +235,7 @@
       "venue": "IEEE Signal Processing in Medicine and Biology Symposium (SPMB)",
       "year": "2026",
       "url": "",
+      "code": "",
       "note": ""
     },
     {
@@ -256,6 +259,7 @@
       "venue": "Journal of Survey Statistics and Methodology (JSSAM)",
       "year": "2026",
       "url": "https://arxiv.org/abs/2510.24183",
+      "code": "",
       "note": "An earlier version, combined with “Intelligent n-means spatial sampling”, is available as arXiv:2510.24183 (2025)"
     },
     {
@@ -275,6 +279,7 @@
       "venue": "Journal of Survey Statistics and Methodology (JSSAM)",
       "year": "2026",
       "url": "https://arxiv.org/abs/2510.24183",
+      "code": "",
       "note": "Minor revision, third review round. An earlier version, combined with “Measuring spatial spread via n-means balanced clustering”, is available as arXiv:2510.24183 (2025)"
     },
     {
@@ -302,6 +307,7 @@
       "venue": "18th Iranian Statistics Conference, K.N. Toosi University of Technology, Tehran, Iran",
       "year": "2026",
       "url": "",
+      "code": "",
       "note": ""
     },
     {
@@ -337,6 +343,7 @@
       "venue": "Companion of the 2025 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp/ISWC '25), pp. 949-955",
       "year": "2025",
       "url": "https://doi.org/10.1145/3714394.3756217",
+      "code": "",
       "note": ""
     },
     {
@@ -360,6 +367,7 @@
       "venue": "Proceedings of the 2nd International Conference on Mathematics and its Applications, Shahid Chamran University of Ahvaz, Ahvaz, Iran, pp. 6-13",
       "year": "2025",
       "url": "",
+      "code": "",
       "note": ""
     },
     {
@@ -391,6 +399,7 @@
       "venue": "Proceedings of the 2nd International Conference on Mathematics and its Applications, Shahid Chamran University of Ahvaz, Ahvaz, Iran, pp. 14-22",
       "year": "2025",
       "url": "",
+      "code": "",
       "note": ""
     },
     {
@@ -418,6 +427,7 @@
       "venue": "31st National and 9th International Iranian Conference on Biomedical Engineering (ICBME), pp. 409-415",
       "year": "2024",
       "url": "https://doi.org/10.1109/ICBME64381.2024.10895619",
+      "code": "",
       "note": ""
     }
   ],
@@ -450,6 +460,18 @@
       "url": "https://github.com/mehdimhb/graphical-sampling",
       "date": "2023",
       "description": "Open-source Python package that implements and extends Graphical Finite Population Sampling, including Intelligent n-Means Spatial Sampling for designing well-spread samples and a Density Index for measuring the spatial spread of a sample."
+    },
+    {
+      "name": "shl2026",
+      "url": "https://github.com/mehdimhb/shl2026",
+      "date": "2026",
+      "description": "Code for “Early and late fusion of frozen foundation models for IMU-based human activity recognition” (SHL Challenge 2026, 1st place): combining frozen time-series foundation models for locomotion and transportation mode recognition from smartphone motion sensors."
+    },
+    {
+      "name": "fog-tsfm",
+      "url": "https://github.com/mehdimhb/fog-tsfm",
+      "date": "2026",
+      "description": "Code for “Leveraging frozen time-series foundation models for IMU-based freezing of gait detection” (ICBME 2026): detecting freezing of gait in Parkinson's disease from wearable IMU data with frozen foundation models."
     }
   ],
   "talks": [],
