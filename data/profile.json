@@ -139,6 +139,46 @@
   ],
   "publications": [
     {
+      "kind": "journal",
+      "status": "under review",
+      "authors": [
+        {
+          "name": "Mehdi Mohebbi",
+          "me": true
+        },
+        {
+          "name": "Amir Mohammad Basuti",
+          "me": false
+        },
+        {
+          "name": "Bahar Marashi",
+          "me": false
+        },
+        {
+          "name": "Hasti Jahantigh",
+          "me": false
+        },
+        {
+          "name": "Mohammad Mahdi Azizi",
+          "me": false
+        },
+        {
+          "name": "Melika Khosravi",
+          "me": false
+        },
+        {
+          "name": "Bagher BabaAli",
+          "me": false
+        }
+      ],
+      "title": "FallPGR: Proposal grouping and refinement for temporal fall localization in continuous multi-radar UWB streams",
+      "venue": "International Journal of Activity and Behavior Computing (IJABC)",
+      "year": "2027",
+      "url": "",
+      "code": "",
+      "note": "Challenge paper for the ABC 2027 UWB FallTrack Challenge"
+    },
+    {
       "kind": "conference",
       "status": "accepted",
       "authors": [
